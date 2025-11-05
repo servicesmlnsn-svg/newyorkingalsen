@@ -112,14 +112,12 @@ function checkoutWave() {
   // Générer un numéro de commande aléatoire
   const orderId = 'NYS-' + Math.floor(100000 + Math.random() * 900000);
 
-  // Sauvegarder le numéro dans le localStorage pour l'afficher après
+  // Sauvegarder les infos dans le localStorage
   localStorage.setItem('nysOrderId', orderId);
-
-  // (Optionnel) Tu pourrais aussi sauvegarder le total :
   localStorage.setItem('nysOrderTotal', totalPriceEl.textContent);
 
-  // Rediriger vers ton lien Wave
-  window.location.href = "https://pay.wave.com/m/M_sn_IWdzK2-Ebllx/c/sn/";
+  // Rediriger directement vers la page de confirmation
+  window.location.href = "confirmation.html";
 }
 </script>
 </body>
