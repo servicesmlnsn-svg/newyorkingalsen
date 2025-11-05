@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Confirmation de paiement — NYS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F5EFE6] flex flex-col items-center justify-center h-screen text-center">
+  <img src="logonys.jpg" class="w-20 mb-4" alt="Logo NYS">
+  <h1 class="text-3xl font-bold text-[#4A2E18] mb-2">Merci pour votre achat !</h1>
+  <p class="text-lg text-[#C89F72] mb-6">Votre paiement a été reçu avec succès.</p>
+  <div id="order-info" class="text-lg font-semibold text-[#4A2E18] mb-6"></div>
+  <a href="index.html" class="bg-[#4A2E18] text-white py-2 px-6 rounded hover:bg-[#C89F72]">Retour à l'accueil</a>
+
+  <script>
+    const orderId = localStorage.getItem('nysOrderId');
+    const total = localStorage.getItem('nysOrderTotal');
+    if (orderId) {
+      document.getElementById('order-info').innerHTML = `
+        Numéro de commande : <span class="text-[#C89F72]">${orderId}</span><br>
+        Montant total : <span class="text-[#C89F72]">${total}</span>
+      `;
+      // Nettoyer le panier après confirmation
+      localStorage.removeItem('nysCart');
+    } else {
+      document.getElementById('order-info').textContent = "Aucune commande récente trouvée.";
+    }
+  </script>
+</body>
+</html>
