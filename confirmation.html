@@ -1,16 +1,58 @@
-<body class="bg-[#F5EFE6] flex flex-col items-center justify-center h-screen text-center">
-  <img src="logonys.jpg" class="w-20 mb-4" alt="Logo NYS">
-  <h1 class="text-3xl font-bold text-[#4A2E18] mb-2">Merci pour votre commande !</h1>
-  <p class="text-lg text-[#C89F72] mb-6">Veuillez finaliser votre paiement via Wave pour confirmer votre achat.</p>
-  <div id="order-info" class="text-lg font-semibold text-[#4A2E18] mb-6"></div>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmation — NewYork in Senegal</title>
+  <link rel="icon" type="image/jpeg" href="logonys.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background: #F5EFE6; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
+  </style>
+</head>
 
-  <a href="https://pay.wave.com/m/M_v6rwCzRuoFoJ/c/sn/"
-     target="_blank"
-     class="bg-[#4A2E18] text-white py-3 px-6 rounded-lg hover:bg-[#C89F72]">
-     💳 Finaliser mon paiement sur Wave
-  </a>
+<body class="flex flex-col min-h-screen">
 
-  <a href="index.html" class="mt-4 text-[#4A2E18] underline">Retour à l'accueil</a>
+  <!-- HEADER -->
+  <header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+      <a class="flex items-center gap-3" href="index.html">
+        <img src="logonys.jpg" class="h-12 w-auto object-contain" alt="Logo NYS">
+        <div>
+          <div class="text-lg font-bold text-[#4A2E18]">NewYork in Senegal</div>
+          <div class="text-xs text-[#C89F72] -mt-1 tracking-wide">Mode & Lifestyle</div>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="flex-grow flex flex-col items-center justify-center text-center px-6 py-10">
+    <h1 class="text-3xl font-bold text-[#4A2E18] mb-2">Merci pour votre commande !</h1>
+    <p class="text-lg text-[#C89F72] mb-6">Veuillez finaliser votre paiement via Wave pour confirmer votre achat.</p>
+
+    <div id="order-info" class="text-lg font-semibold text-[#4A2E18] mb-8 bg-[#FAFAF7] px-6 py-4 rounded-lg shadow-md"></div>
+
+    <!-- LOGO WAVE + BOUTON -->
+    <div class="flex flex-col items-center gap-4">
+      <img src="https://seeklogo.com/images/W/wave-money-logo-4CFC06C9A0-seeklogo.com.png"
+           alt="Wave"
+           class="w-20">
+
+      <a href="https://pay.wave.com/m/M_sn_IWdzK2-Ebllx/c/sn/"
+         target="_blank"
+         class="bg-[#4A2E18] text-white font-medium py-3 px-8 rounded-lg hover:bg-[#C89F72] transition-all">
+         💳 Finaliser mon paiement sur Wave
+      </a>
+    </div>
+
+    <a href="index.html" class="mt-6 text-[#4A2E18] underline">Retour à l'accueil</a>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-[#FAFAF7] border-t border-[#C89F72]/40 text-center py-4 text-sm text-[#4A2E18]">
+    © 2025 NewYork in Senegal — Tous droits réservés.
+  </footer>
 
   <script>
     const orderId = localStorage.getItem('nysOrderId');
@@ -18,12 +60,14 @@
 
     if (orderId) {
       document.getElementById('order-info').innerHTML = `
-        Numéro de commande : <span class="text-[#C89F72]">${orderId}</span><br>
-        Montant total : <span class="text-[#C89F72]">${total}</span>
+        <p>Numéro de commande : <span class="text-[#C89F72]">${orderId}</span></p>
+        <p>Montant total : <span class="text-[#C89F72]">${total}</span></p>
       `;
       localStorage.removeItem('nysCart');
     } else {
       document.getElementById('order-info').textContent = "Aucune commande récente trouvée.";
     }
   </script>
+
 </body>
+</html>
