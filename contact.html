@@ -4,14 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/jpeg" href="logonys.jpg">
-
 <title>Qui sommes-nous — NewYork in Senegal</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 body { background: #F5EFE6; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
 h1,h2 { color: #4A2E18; }
 p { margin-top: 0.5rem; line-height: 1.6; }
-section { margin-bottom: 2rem; }
 a { color: #4A2E18; }
 a:hover { color: #C89F72; }
 </style>
@@ -22,7 +20,7 @@ a:hover { color: #C89F72; }
 <header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40">
   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
     <a class="flex items-center gap-3" href="index.html">
-      <img src="logonys.jpg" class="h-12 w-auto object-contain">
+      <img src="logonys.jpg" class="h-12 w-auto object-contain" alt="Logo NYS">
       <div>
         <div class="text-lg font-bold text-[#4A2E18]">NewYork in Senegal</div>
         <div class="text-xs text-[#C89F72] -mt-1 tracking-wide">Mode & Lifestyle</div>
@@ -34,7 +32,6 @@ a:hover { color: #C89F72; }
       <a href="femme.html" class="hover:text-[#C89F72]">Femme</a>
       <a href="homme.html" class="hover:text-[#C89F72]">Homme</a>
       <a href="contact.html" class="hover:text-[#C89F72] font-semibold">Qui sommes-nous ?</a>
-
     </nav>
 
     <div class="flex items-center gap-4 text-lg">
@@ -43,49 +40,83 @@ a:hover { color: #C89F72; }
   </div>
 </header>
 
-<!-- PAGE TITLE -->
-<section class="max-w-7xl mx-auto px-4 py-6 text-center">
-  <h1 class="text-3xl font-bold">Qui sommes-nous ?</h1>
-  <p class="text-[#4A2E18]/80 mt-2">NewYork in Senegal, où vos rêves de mode américaine deviennent réalité au Sénégal.</p>
+<!-- SECTION 1 : QUI SOMMES-NOUS -->
+<section class="max-w-7xl mx-auto px-4 py-10 text-center">
+  <h1 class="text-3xl font-bold mb-4">Qui sommes-nous ?</h1>
+  <p class="text-[#4A2E18]/80 max-w-2xl mx-auto">
+    <strong>NewYork in Senegal</strong> est une marque qui relie la mode américaine au style sénégalais. 
+    Nous proposons des produits authentiques, importés directement des États-Unis, 
+    avec un service rapide, fiable et personnalisé.  
+    Notre mission : vous offrir la tendance mondiale, chez vous, en toute simplicité.
+  </p>
 </section>
 
-<!-- MAIN CONTENT -->
-<section class="max-w-7xl mx-auto px-4 space-y-8">
+<!-- SECTION 2 : FORMULAIRE DE CONTACT -->
+<section class="max-w-3xl mx-auto px-4 py-10 bg-[#FAFAF7] rounded-xl shadow-md">
+  <h2 class="text-2xl font-semibold text-center mb-6">📩 Contactez-nous</h2>
+  <form action="https://formsubmit.co/fatoukine0209@gmail.com" method="POST" class="space-y-4">
+    <!-- empêche le spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- redirige après envoi -->
+    <input type="hidden" name="_next" value="https://ton-site.netlify.app/merci.html">
 
-  <div>
-    <h2 class="text-2xl font-semibold">Notre Histoire</h2>
-    <p>Chez <strong>NewYork in Senegal</strong>, nous croyons que chaque bagage transporte un rêve. Nous faisons voyager vos envies de style et de tendance américaine jusqu’au Sénégal. <br>
-    Un rêve — un souhait — un fait : voilà notre philosophie. Nous proposons du shopping et des ventes en gros, directement accessibles à Dakar et partout au Sénégal, 7 jours sur 7.</p>
+    <div>
+      <label class="block font-semibold mb-1" for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" required class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]">
+    </div>
+
+    <div>
+      <label class="block font-semibold mb-1" for="prenom">Prénom</label>
+      <input type="text" id="prenom" name="prenom" required class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]">
+    </div>
+
+    <div>
+      <label class="block font-semibold mb-1" for="telephone">Téléphone</label>
+      <input type="tel" id="telephone" name="telephone" required placeholder="Ex: 77 373 74 77" class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]">
+    </div>
+
+    <div>
+      <label class="block font-semibold mb-1" for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]"></textarea>
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="bg-[#4A2E18] text-white py-3 px-8 rounded-lg hover:bg-[#C89F72] transition-all">
+        Envoyer le message
+      </button>
+    </div>
+  </form>
+</section>
+
+<!-- SECTION 3 : CONTACTS ENTREPRISE -->
+<section class="max-w-4xl mx-auto px-4 py-12 text-center">
+  <h2 class="text-2xl font-semibold mb-6">📞 Nos contacts</h2>
+
+  <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-lg">
+    <div class="flex items-center gap-2">
+      <span class="font-semibold">Téléphone :</span> 
+      <a href="tel:+221773737477" class="hover:text-[#C89F72]">77 373 74 77</a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <span class="font-semibold">Email :</span> 
+      <a href="mailto:fatoukine0209@gmail.com" class="hover:text-[#C89F72]">fatoukine0209@gmail.com</a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="w-6 h-6" alt="Instagram">
+      <a href="https://www.instagram.com/new_york_in_senegal_?igsh=MWs3bmt4Z3UyOWZ3bA%3D%3D&utm_source=qr"
+         target="_blank"
+         class="hover:text-[#C89F72]">Instagram</a>
+    </div>
   </div>
-
-  <div>
-    <h2 class="text-2xl font-semibold">Notre Engagement</h2>
-    <p>Nous nous engageons à vous offrir des articles de <strong>qualité et rareté</strong>, avec un service rapide et fiable. Notre objectif : vous proposer le meilleur du shopping américain au prix juste, partout dans le monde.</p>
-  </div>
-
-  <div>
-    <h2 class="text-2xl font-semibold">Politique de confidentialité</h2>
-    <p>Votre vie privée est essentielle pour nous. Voici comment nous protégeons vos données :</p>
-    <ul class="list-disc pl-6 mt-2 space-y-1">
-      <li><strong>Pour vous :</strong> vos données ne seront utilisées que pour les finalités indiquées.</li>
-      <li><strong>Notre promesse :</strong> nous traitons vos informations avec la plus grande sécurité.</li>
-      <li><strong>100% transparent :</strong> vous serez informé de tout ce que vous devez savoir.</li>
-      <li><strong>Juste l’essentiel :</strong> nous conservons uniquement les données nécessaires et supprimons le reste.</li>
-      <li><strong>Pas de blabla :</strong> vous choisissez ce que vous souhaitez recevoir et comment.</li>
-    </ul>
-  </div>
-
-  <div>
-    <h2 class="text-2xl font-semibold">Notre Mission</h2>
-    <p>Vous offrir un accès direct aux tendances et styles américains, tout en respectant vos préférences et votre confidentialité. Avec <strong>NewYork in Senegal</strong>, la mode voyage avec vous, simplement et efficacement.</p>
-  </div>
-
 </section>
 
 <!-- FOOTER -->
-<footer class="mt-20 text-center py-6 text-sm text-[#4A2E18] border-t border-[#C89F72]/40">
+<footer class="mt-10 text-center py-6 text-sm text-[#4A2E18] border-t border-[#C89F72]/40">
   © 2025 • NewYork in Senegal — Tous droits réservés.
 </footer>
+
  <!-- Bouton WhatsApp flottant -->
   <a href="https://wa.me/221773737477" target="_blank"
      class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50 whatsapp-bounce">
