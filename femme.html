@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="logonys.jpg" type="image/jpeg">
+<title>Femme — NewYork in Senegal</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { background: #F5EFE6; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
+  .product-card img { transition: transform 0.3s ease; }
+  .product-card:hover img { transform: scale(1.05); }
+  a { color: #4A2E18; }
+  a:hover { color: #C89F72; }
+  button { cursor: pointer; }
+  .tab-button { display: block; width: 100%; text-left; padding: 0.5rem 1rem; margin-bottom: 0.5rem; border-radius: 0.375rem; border: 1px solid rgba(0,0,0,0.03); }
+  .tab-button.active { background-color: #4A2E18; color: #fff; }
+  @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  .whatsapp-bounce { animation: bounce 2s infinite; }
+</style>
+</head>
+<body>
+
+<!-- HEADER (fixe) -->
+<header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+    <a class="flex items-center gap-3" href="/Users/macbookair/Desktop/NYS/index.html">
+      <img src="logonys.jpg" class="h-12 w-auto object-contain" alt="logo">
+      <div>
+        <div class="text-lg font-bold text-[#4A2E18]">NewYork in Senegal</div>
+        <div class="text-xs text-[#C89F72] -mt-1 tracking-wide">Mode & Lifestyle</div>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="/Users/macbookair/Desktop/NYS/index.html" class="hover:text-[#C89F72]">Accueil</a>
+      <a href="file:///Users/macbookair/Desktop/NYS/femme.html" class="hover:text-[#C89F72] font-semibold">Femme</a>
+      <a href="file:///Users/macbookair/Desktop/NYS/homme.html" class="hover:text-[#C89F72]">Homme</a>
+      <a href="file:///Users/macbookair/Desktop/NYS/contact.html" class="hover:text-[#C89F72]">Qui sommes-nous ?</a>
+    </nav>
+
+    <div class="flex items-center gap-4 text-lg">
+      <a href="panier.html" class="hover:text-[#C89F72]">🛒 Panier</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="max-w-7xl mx-auto px-4 py-6 mt-6">
+  <h1 class="text-3xl font-bold text-[#4A2E18]">Femme</h1>
+  <p class="text-[#4A2E18]/80 mt-2">Découvrez notre sélection de Vêtements, Sacs et Accessoires.</p>
+</section>
+
+<!-- MAIN: left tabs / right products -->
+<div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-4 gap-6">
+
+  <!-- LEFT: categories -->
+  <aside class="bg-[#FAFAF7] rounded-lg p-4 shadow space-y-4">
+    <h2 class="text-lg font-bold mb-3">Catégories</h2>
+    <button class="tab-button active" onclick="showSection('vetements', this)">Vêtements</button>
+    <button class="tab-button" onclick="showSection('sacs', this)">Sacs</button>
+    <button class="tab-button" onclick="showSection('accessoires', this)">Accessoires</button>
+  </aside>
+
+  <!-- RIGHT: products -->
+  <section class="lg:col-span-3">
+
+    <!-- VETEMENTS -->
+    <div id="vetements" class="section grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="IMG_9829.jpg" alt="Robe Street Chic" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Robe Street Chic</p>
+        <p class="text-[#4A2E18] font-bold">9 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Robe Street Chic',9500,'IMG_9829.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="IMG_9835.jpg" alt="Pantalon Urbain" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Pantalon Urbain</p>
+        <p class="text-[#4A2E18] font-bold">12 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Pantalon Urbain',12000,'IMG_9835.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/da.jpeg" alt="Top Chic" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Top Chic</p>
+        <p class="text-[#4A2E18] font-bold">8 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Top Chic',8500,'IMG_9830.jpg')">Ajouter au panier</button>
+      </div>
+
+      <!-- autres exemples -->
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="IMG_9831.jpg" alt="Tee NY x SN" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Tee NY x SN</p>
+        <p class="text-[#4A2E18] font-bold">8 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Tee NY x SN',8000,'IMG_9831.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="IMG_9832.jpg" alt="Veste Urbain" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Veste Urbain</p>
+        <p class="text-[#4A2E18] font-bold">7 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Veste Urbain',7500,'IMG_9832.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="IMG_9833.jpg" alt="Ensemble NY" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Ensemble NY x SN</p>
+        <p class="text-[#4A2E18] font-bold">11 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Ensemble NY x SN',11000,'IMG_9833.jpg')">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <!-- SACS -->
+    <div id="sacs" class="section hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/sac1.jpeg" alt="Sac NY Classique" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Sac NY Classique</p>
+        <p class="text-[#4A2E18] font-bold">15 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Classique',15000,'sac1.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/sac2.jpeg" alt="Sac NY Premium" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Sac NY Premium</p>
+        <p class="text-[#4A2E18] font-bold">18 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Premium',18000,'sac2.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/sac3.jpeg" alt="Sac NY Fashion" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Sac NY Fashion</p>
+        <p class="text-[#4A2E18] font-bold">20 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Fashion',20000,'sac3.jpg')">Ajouter au panier</button>
+      </div>
+    </div>
+
+    <!-- ACCESSOIRES -->
+    <div id="accessoires" class="section hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/IMG_9827.jpg" alt="Boucles d'oreilles" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Boucles d’oreilles NY</p>
+        <p class="text-[#4A2E18] font-bold">5 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Boucles d’oreilles NY',5000,'accessoire1.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/IMG_9828.jpg" alt="Collier Chic" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Collier Chic NY</p>
+        <p class="text-[#4A2E18] font-bold">7 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Collier Chic NY',7000,'accessoire2.jpg')">Ajouter au panier</button>
+      </div>
+
+      <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/IMG_9834.jpg" alt="Bracelet NY" class="w-full h-80 object-cover rounded">
+        <p class="mt-3 font-semibold">Bracelet NY</p>
+        <p class="text-[#4A2E18] font-bold">6 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Bracelet NY',6500,'accessoire3.jpg')">Ajouter au panier</button>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer class="mt-20 text-center py-6 text-sm text-[#4A2E18] border-t border-[#C89F72]/40">
+  © 2025 • NewYork in Senegal — Tous droits réservés.
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+  // Add to cart (localStorage)
+  function addToCart(name, price, image) {
+    let cart = JSON.parse(localStorage.getItem('nysCart')) || [];
+    let existing = cart.find(item => item.name === name && item.image === image);
+    if (existing) {
+      existing.quantity += 1;
+    } else {
+      cart.push({ name, price, image, quantity: 1 });
+    }
+    localStorage.setItem('nysCart', JSON.stringify(cart));
+    // Option: redirect to panier.html -> uncomment next line if desired
+    // window.location.href = 'panier.html';
+    alert(name + ' a été ajouté au panier !');
+  }
+
+  // Switch sections (left tabs)
+  function showSection(id, btn) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+
+    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+
+  // On load: ensure default visible
+  document.addEventListener('DOMContentLoaded', () => {
+    showSection('vetements', document.querySelector('.tab-button'));
+  });
+</script>
+
+ <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/221773737477" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50 whatsapp-bounce">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .01 5.37.01 12a11.93 11.93 0 001.91 6.18L0 24l5.94-1.92A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22.08c-2.05 0-3.95-.62-5.56-1.68l-.4-.27-3.52 1.14 1.14-3.42-.26-.41A9.935 9.935 0 012.08 12c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.93 1.88 1.88 2.92 4.38 2.92 7.03 0 5.49-4.47 9.96-9.96 9.96zm5.44-7.44c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.78.98-.95 1.18-.17.2-.34.22-.64.08-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.65-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.23-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.53.07-.81.38s-1.06 1.04-1.06 2.55c0 1.5 1.08 2.96 1.23 3.17.15.2 2.12 3.22 5.13 4.52.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.07-.12-.27-.2-.57-.35z"/>
+    </svg>
+  </a>
+
+</body>
+</html>

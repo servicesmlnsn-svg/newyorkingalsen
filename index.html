@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" type="image/jpeg" href="logonys.jpg">
+  <title>NewYork in Senegal — Accueil</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { background: #F5EFE6; }
+
+    /* Carousel */
+    .hero-slide { 
+      min-height: 70vh; 
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .hero-slide.active { opacity: 1; }
+
+    /* Animation bouton WhatsApp */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .whatsapp-bounce { animation: bounce 2s infinite; }
+  </style>
+</head>
+
+<body class="antialiased text-[#2A2A2A] font-sans">
+
+  <!-- Bandeau promo -->
+  <div class="bg-[#4A2E18] text-white text-center py-2 text-sm">
+    LIVRAISON GRATUITE PARTOUT AU SÉNÉGAL 🚚🇸🇳
+  </div>
+
+  <!-- HEADER (FIXE) -->
+  <header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+      <a class="flex items-center gap-3" href="/Users/macbookair/Desktop/NYS/index.html">
+        <img src="/Users/macbookair/Desktop/NYS/logonys.jpg" class="h-12 w-auto object-contain">
+        <div>
+          <div class="text-lg font-bold text-[#4A2E18]">NewYork in Senegal</div>
+          <div class="text-xs text-[#C89F72] -mt-1 tracking-wide">Mode & Lifestyle</div>
+        </div>
+      </a>
+
+      <form class="hidden md:block relative w-1/2">
+        <input placeholder="Rechercher un article..."
+          class="w-full border border-[#C89F72]/40 rounded-full py-3 px-4 pr-20 focus:ring-[#C89F72] focus:border-[#C89F72]">
+        <button class="absolute right-1 top-1/2 -translate-y-1/2 bg-[#4A2E18] text-white rounded-full px-4 py-2 text-sm">OK</button>
+      </form>
+
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-[#C89F72]">Mon compte</a>
+        <a href="file:///Users/macbookair/Desktop/NYS/panier.html" class="hover:text-[#C89F72]">Panier (0)</a>
+      </div>
+    </div>
+
+    <nav class="border-t border-[#C89F72]/30">
+      <ul class="max-w-7xl mx-auto px-4 py-3 flex gap-6 text-sm">
+        <li><a class="hover:text-[#4A2E18]">Nouveautés</a></li>
+        <li><a href="file:///Users/macbookair/Desktop/NYS/homme.html" class="hover:text-[#C89F72]">Homme</a></li>
+        <li><a href="/Users/macbookair/Desktop/NYS/femme.html" class="hover:text-[#C89F72]">Femme</a></li>
+        <li><a href="/Users/macbookair/Desktop/NYS/contact.html" class="hover:text-[#C89F72] font-semibold">Qui sommes-nous ?</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CARROUSEL -->
+  <div class="relative h-[70vh] overflow-hidden">
+    <div class="hero-slide active" style="background-image:url('/Users/macbookair/Desktop/NYS/IMG_9830.jpg');"></div>
+    <div class="hero-slide" style="background-image:url('/Users/macbookair/Desktop/NYS/IMG_9826.jpg');"></div>
+    <div class="hero-slide" style="background-image:url('/Users/macbookair/Desktop/NYS/da.jpeg');"></div>
+
+    <button onclick="prevSlide()" class="absolute left-5 top-1/2 -translate-y-1/2 text-white text-4xl">‹</button>
+    <button onclick="nextSlide()" class="absolute right-5 top-1/2 -translate-y-1/2 text-white text-4xl">›</button>
+  </div>
+
+  <script>
+    let slides = document.querySelectorAll('.hero-slide');
+    let i = 0;
+
+    function showSlide(n){
+      slides.forEach(s => s.classList.remove('active'));
+      slides[n].classList.add('active');
+    }
+
+    function nextSlide(){
+      i = (i+1) % slides.length;
+      showSlide(i);
+    }
+
+    function prevSlide(){
+      i = (i-1+slides.length) % slides.length;
+      showSlide(i);
+    }
+
+    setInterval(nextSlide, 4000);
+  </script>
+
+  <!-- Nouveaux articles -->
+  <section class="max-w-7xl mx-auto px-4 mt-12">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-2xl font-bold text-[#4A2E18]">Nouveaux Arrivages</h2>
+      <a class="text-[#C89F72] hover:text-[#4A2E18]">Voir tout →</a>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-[#FAFAF7] rounded-lg shadow p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/da.jpeg" class="w-full h-56 object-cover rounded">
+        <p class="mt-3 font-semibold">Produit Exemple</p>
+        <p class="text-[#4A2E18] font-bold">9 500 FCFA</p>
+      </div>
+
+      <div class="bg-[#FAFAF7] rounded-lg shadow p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/liefties2.jpg" class="w-full h-56 object-cover rounded">
+        <p class="mt-3 font-semibold">Produit Exemple</p>
+        <p class="text-[#4A2E18] font-bold">8 000 FCFA</p>
+      </div>
+
+      <div class="bg-[#FAFAF7] rounded-lg shadow p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/IMG_9835.jpg" class="w-full h-56 object-cover rounded">
+        <p class="mt-3 font-semibold">Produit Exemple</p>
+        <p class="text-[#4A2E18] font-bold">12 000 FCFA</p>
+      </div>
+
+      <div class="bg-[#FAFAF7] rounded-lg shadow p-3 text-center">
+        <img src="/Users/macbookair/Desktop/NYS/IMG_9828.jpg" class="w-full h-56 object-cover rounded">
+        <p class="mt-3 font-semibold">Produit Exemple</p>
+        <p class="text-[#4A2E18] font-bold">7 500 FCFA</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-20 text-center py-6 text-sm text-[#4A2E18] border-t border-[#C89F72]/40">
+    © 2025 • NewYork in Senegal — Tous droits réservés.
+  </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/221773737477" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50 whatsapp-bounce">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .01 5.37.01 12a11.93 11.93 0 001.91 6.18L0 24l5.94-1.92A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22.08c-2.05 0-3.95-.62-5.56-1.68l-.4-.27-3.52 1.14 1.14-3.42-.26-.41A9.935 9.935 0 012.08 12c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.93 1.88 1.88 2.92 4.38 2.92 7.03 0 5.49-4.47 9.96-9.96 9.96zm5.44-7.44c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.78.98-.95 1.18-.17.2-.34.22-.64.08-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.65-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.23-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.53.07-.81.38s-1.06 1.04-1.06 2.55c0 1.5 1.08 2.96 1.23 3.17.15.2 2.12 3.22 5.13 4.52.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.07-.12-.27-.2-.57-.35z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
