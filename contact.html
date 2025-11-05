@@ -4,23 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/jpeg" href="logonys.jpg">
+
 <title>Qui sommes-nous — NewYork in Senegal</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
 body { background: #F5EFE6; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
-h1,h2 { color: #4A2E18; }
+h1,h2,h3 { color: #4A2E18; }
 p { margin-top: 0.5rem; line-height: 1.6; }
 a { color: #4A2E18; }
 a:hover { color: #C89F72; }
+.section { display: none; }
+.section.active { display: block; }
 </style>
 </head>
 <body>
 
 <!-- HEADER -->
-<header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40">
+<header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40 sticky top-0 z-50">
   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
     <a class="flex items-center gap-3" href="index.html">
-      <img src="logonys.jpg" class="h-12 w-auto object-contain" alt="Logo NYS">
+      <img src="logonys.jpg" class="h-12 w-auto object-contain">
       <div>
         <div class="text-lg font-bold text-[#4A2E18]">NewYork in Senegal</div>
         <div class="text-xs text-[#C89F72] -mt-1 tracking-wide">Mode & Lifestyle</div>
@@ -40,90 +43,147 @@ a:hover { color: #C89F72; }
   </div>
 </header>
 
-<!-- SECTION 1 : QUI SOMMES-NOUS -->
-<section class="max-w-7xl mx-auto px-4 py-10 text-center">
-  <h1 class="text-3xl font-bold mb-4">Qui sommes-nous ?</h1>
-  <p class="text-[#4A2E18]/80 max-w-2xl mx-auto">
-    <strong>NewYork in Senegal</strong> est une marque qui relie la mode américaine au style sénégalais. 
-    Nous proposons des produits authentiques, importés directement des États-Unis, 
-    avec un service rapide, fiable et personnalisé.  
-    Notre mission : vous offrir la tendance mondiale, chez vous, en toute simplicité.
-  </p>
-</section>
+<!-- CONTENU PRINCIPAL -->
+<div class="max-w-7xl mx-auto px-4 py-10 grid md:grid-cols-4 gap-10">
+  
+  <!-- MENU LATERAL -->
+  <aside class="md:col-span-1 space-y-4">
+    <button onclick="showSection(1)" class="w-full py-3 rounded-lg bg-[#4A2E18] text-white hover:bg-[#C89F72] transition">Qui sommes-nous</button>
+    <button onclick="showSection(2)" class="w-full py-3 rounded-lg bg-[#4A2E18] text-white hover:bg-[#C89F72] transition">Nous contacter</button>
+    <button onclick="showSection(3)" class="w-full py-3 rounded-lg bg-[#4A2E18] text-white hover:bg-[#C89F72] transition">Nos coordonnées</button>
+  </aside>
 
-<!-- SECTION 2 : FORMULAIRE DE CONTACT -->
-<section class="max-w-3xl mx-auto px-4 py-10 bg-[#FAFAF7] rounded-xl shadow-md">
-  <h2 class="text-2xl font-semibold text-center mb-6">📩 Contactez-nous</h2>
-  <form action="https://formsubmit.co/fatoukine0209@gmail.com" method="POST" class="space-y-4">
-    <!-- empêche le spam -->
-    <input type="hidden" name="_captcha" value="false">
-    <!-- redirige après envoi -->
-    <input type="hidden" name="_next" value="https://ton-site.netlify.app/merci.html">
+  <!-- SECTIONS -->
+  <main class="md:col-span-3 space-y-10">
 
-    <div>
-      <label class="block font-semibold mb-1" for="nom">Nom</label>
-      <input type="text" id="nom" name="nom" required class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]">
-    </div>
+    <!-- SECTION 1 : QUI SOMMES-NOUS -->
+    <section id="section-1" class="section active">
+      <h1 class="text-3xl font-bold mb-6">Qui sommes-nous ?</h1>
+      <p class="text-[#4A2E18]/80 mb-6">NewYork in Senegal, où vos rêves de mode américaine deviennent réalité au Sénégal.</p>
 
-    <div>
-      <label class="block font-semibold mb-1" for="prenom">Prénom</label>
-      <input type="text" id="prenom" name="prenom" required class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]">
-    </div>
+      <div class="space-y-6">
+        <div>
+          <h2 class="text-2xl font-semibold">Notre Histoire</h2>
+          <p>Chez <strong>NewYork in Senegal</strong>, nous croyons que chaque bagage transporte un rêve. Nous faisons voyager vos envies de style et de tendance américaine jusqu’au Sénégal.<br>
+          Un rêve — un souhait — un fait : voilà notre philosophie. Nous proposons du shopping et des ventes en gros, directement accessibles à Dakar et partout au Sénégal, 7 jours sur 7.</p>
+        </div>
 
-    <div>
-      <label class="block font-semibold mb-1" for="telephone">Téléphone</label>
-      <input type="tel" id="telephone" name="telephone" required placeholder="Ex: 77 373 74 77" class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]">
-    </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Notre Engagement</h2>
+          <p>Nous nous engageons à vous offrir des articles de <strong>qualité et rareté</strong>, avec un service rapide et fiable. Notre objectif : vous proposer le meilleur du shopping américain au prix juste, partout dans le monde.</p>
+        </div>
 
-    <div>
-      <label class="block font-semibold mb-1" for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required class="w-full border border-[#C89F72]/40 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-[#C89F72]"></textarea>
-    </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Politique de confidentialité</h2>
+          <ul class="list-disc pl-6 mt-2 space-y-1">
+            <li><strong>Pour vous :</strong> vos données ne seront utilisées que pour les finalités indiquées.</li>
+            <li><strong>Notre promesse :</strong> nous traitons vos informations avec la plus grande sécurité.</li>
+            <li><strong>100% transparent :</strong> vous serez informé de tout ce que vous devez savoir.</li>
+            <li><strong>Juste l’essentiel :</strong> nous conservons uniquement les données nécessaires et supprimons le reste.</li>
+          </ul>
+        </div>
 
-    <div class="text-center">
-      <button type="submit" class="bg-[#4A2E18] text-white py-3 px-8 rounded-lg hover:bg-[#C89F72] transition-all">
-        Envoyer le message
-      </button>
-    </div>
-  </form>
-</section>
+        <div>
+          <h2 class="text-2xl font-semibold">Notre Mission</h2>
+          <p>Vous offrir un accès direct aux tendances et styles américains, tout en respectant vos préférences et votre confidentialité. Avec <strong>NewYork in Senegal</strong>, la mode voyage avec vous, simplement et efficacement.</p>
+        </div>
+      </div>
+    </section>
 
-<!-- SECTION 3 : CONTACTS ENTREPRISE -->
-<section class="max-w-4xl mx-auto px-4 py-12 text-center">
-  <h2 class="text-2xl font-semibold mb-6">📞 Nos contacts</h2>
+    <!-- SECTION 2 : FORMULAIRE -->
+    <section id="section-2" class="section">
+      <h1 class="text-3xl font-bold mb-8 text-center">Nous contacter</h1>
 
-  <div class="flex flex-col md:flex-row justify-center items-center gap-8 text-lg">
-    <div class="flex items-center gap-2">
-      <span class="font-semibold">Téléphone :</span> 
-      <a href="tel:+221773737477" class="hover:text-[#C89F72]">77 373 74 77</a>
-    </div>
+      <div class="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-xl max-w-2xl mx-auto border border-[#C89F72]/40">
+        <p class="text-[#4A2E18] text-center mb-6 text-lg">
+          Une question, une demande ou une commande spéciale ?  
+          <span class="text-[#C89F72] font-semibold">Écrivez-nous, nous vous répondrons sous 24h.</span>
+        </p>
 
-    <div class="flex items-center gap-2">
-      <span class="font-semibold">Email :</span> 
-      <a href="mailto:fatoukine0209@gmail.com" class="hover:text-[#C89F72]">fatoukine0209@gmail.com</a>
-    </div>
+        <form action="https://formsubmit.co/fatoukine0209@gmail.com" method="POST" class="space-y-6">
+          <input type="hidden" name="_next" value="https://tonsite.netlify.app/message-envoye.html">
+          <input type="hidden" name="_captcha" value="false">
 
-    <div class="flex items-center gap-2">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" class="w-6 h-6" alt="Instagram">
-      <a href="https://www.instagram.com/new_york_in_senegal_?igsh=MWs3bmt4Z3UyOWZ3bA%3D%3D&utm_source=qr"
-         target="_blank"
-         class="hover:text-[#C89F72]">Instagram</a>
-    </div>
-  </div>
-</section>
+          <div>
+            <label class="block text-left text-[#4A2E18] font-semibold mb-1">Nom complet</label>
+            <input type="text" name="Nom complet" required class="w-full border border-[#C89F72]/40 rounded-lg px-4 py-3 bg-[#FAFAF7] focus:ring-2 focus:ring-[#C89F72] focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-left text-[#4A2E18] font-semibold mb-1">Téléphone</label>
+            <input type="tel" name="Téléphone" required class="w-full border border-[#C89F72]/40 rounded-lg px-4 py-3 bg-[#FAFAF7] focus:ring-2 focus:ring-[#C89F72] focus:outline-none">
+          </div>
+
+          <div>
+            <label class="block text-left text-[#4A2E18] font-semibold mb-1">Message</label>
+            <textarea name="Message" rows="4" required class="w-full border border-[#C89F72]/40 rounded-lg px-4 py-3 bg-[#FAFAF7] focus:ring-2 focus:ring-[#C89F72] focus:outline-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-[#4A2E18] hover:bg-[#C89F72] text-white font-semibold py-3 rounded-lg transition duration-200">
+            📩 Envoyer le message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 3 : COORDONNÉES -->
+    <section id="section-3" class="section">
+      <h1 class="text-3xl font-bold mb-8 text-center">Nos coordonnées</h1>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-[#C89F72]/30">
+          <h3 class="text-2xl font-semibold text-[#4A2E18] mb-4">Contactez-nous</h3>
+
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-6 h-6" alt="email">
+              <a href="mailto:fatoukine0209@gmail.com" class="text-[#4A2E18] hover:text-[#C89F72]">fatoukine0209@gmail.com</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" class="w-6 h-6" alt="phone">
+              <a href="tel:+221773737477" class="text-[#4A2E18] hover:text-[#C89F72]">+221 77 373 74 77</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" class="w-6 h-6" alt="Instagram">
+              <a href="https://www.instagram.com/new_york_in_senegal_?igsh=MWs3bmt4Z3UyOWZ3bA%3D%3D&utm_source=qr" target="_blank" class="text-[#4A2E18] hover:text-[#C89F72]">
+                new_york_in_senegal_
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-[#4A2E18]/80 leading-relaxed">
+          <img src="logonys.jpg" class="w-32 mx-auto mb-4 rounded-xl shadow-md">
+          <p><strong>NewYork in Senegal</strong> — votre passerelle entre la mode américaine et le Sénégal.  
+          Disponibles 7j/7 pour vos besoins en shopping et tendances.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
 
 <!-- FOOTER -->
-<footer class="mt-10 text-center py-6 text-sm text-[#4A2E18] border-t border-[#C89F72]/40">
+<footer class="mt-20 text-center py-6 text-sm text-[#4A2E18] border-t border-[#C89F72]/40">
   © 2025 • NewYork in Senegal — Tous droits réservés.
 </footer>
 
- <!-- Bouton WhatsApp flottant -->
-  <a href="https://wa.me/221773737477" target="_blank"
-     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50 whatsapp-bounce">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .01 5.37.01 12a11.93 11.93 0 001.91 6.18L0 24l5.94-1.92A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22.08c-2.05 0-3.95-.62-5.56-1.68l-.4-.27-3.52 1.14 1.14-3.42-.26-.41A9.935 9.935 0 012.08 12c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.93 1.88 1.88 2.92 4.38 2.92 7.03 0 5.49-4.47 9.96-9.96 9.96zm5.44-7.44c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.78.98-.95 1.18-.17.2-.34.22-.64.08-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.65-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.23-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.53.07-.81.38s-1.06 1.04-1.06 2.55c0 1.5 1.08 2.96 1.23 3.17.15.2 2.12 3.22 5.13 4.52.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.07-.12-.27-.2-.57-.35z"/>
-    </svg>
-  </a>
+<!-- WHATSAPP FLOTTANT -->
+<a href="https://wa.me/221773737477" target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center z-50">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 .01 5.37.01 12a11.93 11.93 0 001.91 6.18L0 24l5.94-1.92A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zM12 22.08c-2.05 0-3.95-.62-5.56-1.68l-.4-.27-3.52 1.14 1.14-3.42-.26-.41A9.935 9.935 0 012.08 12c0-5.49 4.47-9.96 9.96-9.96 2.66 0 5.16 1.04 7.04 2.93 1.88 1.88 2.92 4.38 2.92 7.03 0 5.49-4.47 9.96-9.96 9.96zm5.44-7.44c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.15-.2.3-.78.98-.95 1.18-.17.2-.34.22-.64.08-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.48-1.77-1.65-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.34.45-.51.15-.17.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.67-1.62-.92-2.23-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.53.07-.81.38s-1.06 1.04-1.06 2.55c0 1.5 1.08 2.96 1.23 3.17.15.2 2.12 3.22 5.13 4.52.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.44.25-.71.25-1.32.18-1.44-.07-.12-.27-.2-.57-.35z"/>
+  </svg>
+</a>
+
+<script>
+function showSection(n) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById('section-' + n).classList.add('active');
+}
+</script>
 
 </body>
 </html>
