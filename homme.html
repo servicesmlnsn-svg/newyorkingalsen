@@ -7,7 +7,7 @@
 <title>Femme — NewYork in Senegal</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-  body { background: #F5EFE6; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
+  body { background: #FFE4E1; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
   .product-card img { transition: transform 0.3s ease; }
   .product-card:hover img { transform: scale(1.05); }
   a { color: #4A2E18; }
@@ -21,29 +21,38 @@
 </head>
 <body>
 
-<!-- HEADER (fixe) -->
-<header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40 sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
-    <a class="flex items-center gap-3" href="index.html">
-      <img src="logonys.jpg" class="h-12 w-auto object-contain" alt="logo">
-      <div>
-        <div class="text-lg font-bold text-[#4A2E18]">NewYork in Senegal</div>
-        <div class="text-xs text-[#C89F72] -mt-1 tracking-wide">Mode & Lifestyle</div>
+  <!-- HEADER (FIXE) -->
+  <header class="bg-[#FFE4E1] shadow-sm border-b border-[#C89F72]/40 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+      <a class="flex items-center gap-3" href="index.html">
+        <img src="logonys.jpg" class="h-12 w-auto object-contain">
+        <div>
+          <div class="text-lg font-bold text-[#F9429E]">NewYork in Senegal</div>
+          <div class="text-xs text-[#ff6eaa] -mt-1 tracking-wide">Mode & Lifestyle</div>
+        </div>
+      </a>
+
+      <form class="hidden md:block relative w-1/2">
+        <input placeholder="Rechercher un article..."
+          class="w-full border border-[#FFE4E1]/40 rounded-full py-3 px-4 pr-20 focus:ring-[#C89F72] focus:border-[#C89F72]">
+        <button class="absolute right-1 top-1/2 -translate-y-1/2 bg-[#F9429E] text-white rounded-full px-4 py-2 text-sm">OK</button>
+      </form>
+
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-[#000000]">Mon compte</a>
+        <a href="panier.html" class="hover:text-[#000000]">Panier (0)</a>
       </div>
-    </a>
-
-    <nav class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="index.html" class="hover:text-[#C89F72]">Accueil</a>
-      <a href="femme.html" class="hover:text-[#C89F72] font-semibold">Femme</a>
-      <a href="homme.html" class="hover:text-[#C89F72]">Homme</a>
-      <a href="contact.html" class="hover:text-[#C89F72]">Qui sommes-nous ?</a>
-    </nav>
-
-    <div class="flex items-center gap-4 text-lg">
-      <a href="panier.html" class="hover:text-[#C89F72]">🛒 Panier</a>
     </div>
-  </div>
-</header>
+
+    <nav class="border-t border-[#FFE4E1]/30">
+      <ul class="max-w-7xl mx-auto px-4 py-3 flex gap-6 text-sm">
+        <li><a href="index.html" class="hover:text-[#C89F72]">Accueil</a></li>
+        <li><a href="homme.html" class="hover:text-[#F9429E]">Homme</a></li>
+        <li><a href="femme.html" class="hover:text-[#F9429E]">Femme</a></li>
+        <li><a href="contact.html" class="hover:text-[#F9429E] font-semibold">Qui sommes-nous ?</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <!-- PAGE TITLE -->
 <section class="max-w-7xl mx-auto px-4 py-6 mt-6">
