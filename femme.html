@@ -7,48 +7,57 @@
 <title>Femme — NewYork in Senegal</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-  body { background: #F5EFE6; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
+  body { background: #FFE4E1; font-family: 'Poppins', sans-serif; color: #2A2A2A; }
   .product-card img { transition: transform 0.3s ease; }
   .product-card:hover img { transform: scale(1.05); }
-  a { color: #4A2E18; }
+  a { color: #d91492; }
   a:hover { color: #C89F72; }
   button { cursor: pointer; }
   .tab-button { display: block; width: 100%; text-left; padding: 0.5rem 1rem; margin-bottom: 0.5rem; border-radius: 0.375rem; border: 1px solid rgba(0,0,0,0.03); }
-  .tab-button.active { background-color: #4A2E18; color: #fff; }
+  .tab-button.active { background-color: #d91492; color: #fff; }
   @keyframes bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
   .whatsapp-bounce { animation: bounce 2s infinite; }
 </style>
 </head>
 <body>
 
-<!-- HEADER (fixe) -->
-<header class="bg-[#FAFAF7] shadow-sm border-b border-[#C89F72]/40 sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
-    <a class="flex items-center gap-3" href="index.html">
-      <img src="logonys.jpg" class="h-12 w-auto object-contain" alt="logo">
-      <div>
-        <div class="text-lg font-bold text-[#4A2E18]">NewYork in Senegal</div>
-        <div class="text-xs text-[#C89F72] -mt-1 tracking-wide">Mode & Lifestyle</div>
+<!-- HEADER (FIXE) -->
+  <header class="bg-[#FFE4E1] shadow-sm border-b border-[#C89F72]/40 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
+      <a class="flex items-center gap-3" href="index.html">
+        <img src="logonys.jpg" class="h-12 w-auto object-contain">
+        <div>
+          <div class="text-lg font-bold text-[#F9429E]">NewYork in Senegal</div>
+          <div class="text-xs text-[#ff6eaa] -mt-1 tracking-wide">Mode & Lifestyle</div>
+        </div>
+      </a>
+
+      <form class="hidden md:block relative w-1/2">
+        <input placeholder="Rechercher un article..."
+          class="w-full border border-[#FFE4E1]/40 rounded-full py-3 px-4 pr-20 focus:ring-[#C89F72] focus:border-[#C89F72]">
+        <button class="absolute right-1 top-1/2 -translate-y-1/2 bg-[#F9429E] text-white rounded-full px-4 py-2 text-sm">OK</button>
+      </form>
+
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-[#000000]">Mon compte</a>
+        <a href="panier.html" class="hover:text-[#000000]">Panier (0)</a>
       </div>
-    </a>
-
-    <nav class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="index.html" class="hover:text-[#C89F72]">Accueil</a>
-      <a href="femme.html" class="hover:text-[#C89F72] font-semibold">Femme</a>
-      <a href="homme.html" class="hover:text-[#C89F72]">Homme</a>
-      <a href="contact.html" class="hover:text-[#C89F72]">Qui sommes-nous ?</a>
-    </nav>
-
-    <div class="flex items-center gap-4 text-lg">
-      <a href="panier.html" class="hover:text-[#C89F72]">🛒 Panier</a>
     </div>
-  </div>
-</header>
+
+    <nav class="border-t border-[#FFE4E1]/30">
+      <ul class="max-w-7xl mx-auto px-4 py-3 flex gap-6 text-sm">
+        <li><a href="index.html" class="hover:text-[#C89F72]">Accueil</a></li>
+        <li><a href="homme.html" class="hover:text-[#F9429E]">Homme</a></li>
+        <li><a href="femme.html" class="hover:text-[#F9429E]">Femme</a></li>
+        <li><a href="contact.html" class="hover:text-[#F9429E] font-semibold">Qui sommes-nous ?</a></li>
+      </ul>
+    </nav>
+  </header>
 
 <!-- PAGE TITLE -->
 <section class="max-w-7xl mx-auto px-4 py-6 mt-6">
-  <h1 class="text-3xl font-bold text-[#4A2E18]">Femme</h1>
-  <p class="text-[#4A2E18]/80 mt-2">Découvrez notre sélection de Vêtements, Sacs et Accessoires.</p>
+  <h1 class="text-3xl font-bold text-[#d91492]">Femme</h1>
+  <p class="text-[#d91492]/80 mt-2">Découvrez notre sélection de Vêtements, Sacs et Accessoires.</p>
 </section>
 
 <!-- MAIN: left tabs / right products -->
@@ -70,44 +79,44 @@
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9829.jpg" alt="Robe Street Chic" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Robe Street Chic</p>
-        <p class="text-[#4A2E18] font-bold">9 500 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Robe Street Chic',9500,'IMG_9829.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">9 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Robe Street Chic',9500,'IMG_9829.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9835.jpg" alt="Pantalon Urbain" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Pantalon Urbain</p>
-        <p class="text-[#4A2E18] font-bold">12 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Pantalon Urbain',12000,'IMG_9835.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">12 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Pantalon Urbain',12000,'IMG_9835.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="da.jpeg" alt="Top Chic" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Top Chic</p>
-        <p class="text-[#4A2E18] font-bold">8 500 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Top Chic',8500,'IMG_9830.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">8 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Top Chic',8500,'IMG_9830.jpg')">Ajouter au panier</button>
       </div>
 
       <!-- autres exemples -->
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9831.jpg" alt="Tee NY x SN" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Tee NY x SN</p>
-        <p class="text-[#4A2E18] font-bold">8 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Tee NY x SN',8000,'IMG_9831.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">8 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Tee NY x SN',8000,'IMG_9831.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9832.jpg" alt="Veste Urbain" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Veste Urbain</p>
-        <p class="text-[#4A2E18] font-bold">7 500 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Veste Urbain',7500,'IMG_9832.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">7 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Veste Urbain',7500,'IMG_9832.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9833.jpg" alt="Ensemble NY" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Ensemble NY x SN</p>
-        <p class="text-[#4A2E18] font-bold">11 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Ensemble NY x SN',11000,'IMG_9833.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">11 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Ensemble NY x SN',11000,'IMG_9833.jpg')">Ajouter au panier</button>
       </div>
     </div>
 
@@ -116,22 +125,22 @@
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="sac1.jpeg" alt="Sac NY Classique" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Sac NY Classique</p>
-        <p class="text-[#4A2E18] font-bold">15 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Classique',15000,'sac1.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">15 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Classique',15000,'sac1.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="sac2.jpeg" alt="Sac NY Premium" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Sac NY Premium</p>
-        <p class="text-[#4A2E18] font-bold">18 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Premium',18000,'sac2.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">18 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Premium',18000,'sac2.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="sac3.jpeg" alt="Sac NY Fashion" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Sac NY Fashion</p>
-        <p class="text-[#4A2E18] font-bold">20 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Fashion',20000,'sac3.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">20 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Sac NY Fashion',20000,'sac3.jpg')">Ajouter au panier</button>
       </div>
     </div>
 
@@ -140,22 +149,22 @@
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9827.jpg" alt="Boucles d'oreilles" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Boucles d’oreilles NY</p>
-        <p class="text-[#4A2E18] font-bold">5 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Boucles d’oreilles NY',5000,'accessoire1.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">5 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Boucles d’oreilles NY',5000,'accessoire1.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9828.jpg" alt="Collier Chic" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Collier Chic NY</p>
-        <p class="text-[#4A2E18] font-bold">7 000 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Collier Chic NY',7000,'accessoire2.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">7 000 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Collier Chic NY',7000,'accessoire2.jpg')">Ajouter au panier</button>
       </div>
 
       <div class="product-card bg-[#FAFAF7] rounded-lg shadow-md p-3 text-center">
         <img src="IMG_9834.jpg" alt="Bracelet NY" class="w-full h-80 object-cover rounded">
         <p class="mt-3 font-semibold">Bracelet NY</p>
-        <p class="text-[#4A2E18] font-bold">6 500 FCFA</p>
-        <button class="mt-2 w-full bg-[#4A2E18] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Bracelet NY',6500,'accessoire3.jpg')">Ajouter au panier</button>
+        <p class="text-[#d91492] font-bold">6 500 FCFA</p>
+        <button class="mt-2 w-full bg-[#d91492] text-white py-2 rounded hover:bg-[#C89F72]" onclick="addToCart('Bracelet NY',6500,'accessoire3.jpg')">Ajouter au panier</button>
       </div>
     </div>
 
